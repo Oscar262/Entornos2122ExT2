@@ -1,4 +1,4 @@
-public class Problema3 {
+public class Problema4 {
 
     public static String cadena_1_20() {
         String cadena = "1";
@@ -15,6 +15,7 @@ public class Problema3 {
         }
         return cadena;
     }
+
 
     private static String multiplos(String cadena, int i) {
         if (i % 3 == 0 && i % 5 == 0) {
@@ -36,12 +37,14 @@ public class Problema3 {
 
     public static String cadena_6_20_con_Fizz_Buzz_Foo_Boo(String numero, String segundoNumero) {
         String cadena = "";
-        char numeroInt = (char) Integer.parseInt(numero);
-        char numeroInt2 = (char) Integer.parseInt(segundoNumero);
-        for (int i = numeroInt; i <= numeroInt2; i++) {
+        for (int i = cambiar_palabra_numero(numero); i <= cambiar_palabra_numero(segundoNumero); i++) {
             cadena = multiplos(cadena, i);
         }
         return cadena;
+    }
+
+    private static char cambiar_palabra_numero(String numero) {
+        return (char) Integer.parseInt(numero);
     }
 
     public static String cadena_1_20_con_Foo_Boo() {
