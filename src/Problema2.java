@@ -29,10 +29,22 @@ public class Problema2 {
         return cadena;
     }
 
-    public static String cadena_8_15() {
-        String cadena = "1";
-        for (int i = 2; i <= 20; i++) {
+    public static String cadena_8_15(String numero, String segundoNumero) {
+        String cadena = numero;
+        char numeroInt= (char) Integer.parseInt(numero);
+        char numeroInt2= (char) Integer.parseInt(segundoNumero);
+        for (int i = numeroInt+1; i <= numeroInt2; i++) {
             cadena += i;
+        }
+        return cadena;
+    }
+
+    public static String cadena_8_15_con_Fizz_Buzz(String numero, String segundoNumero) {
+        String cadena = numero;
+        char numeroInt = (char) Integer.parseInt(numero);
+        char numeroInt2 = (char) Integer.parseInt(segundoNumero);
+        for (int i = numeroInt + 1; i <= numeroInt2; i++) {
+            cadena = multiplos(cadena, i);
         }
         return cadena;
     }
