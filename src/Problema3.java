@@ -23,21 +23,23 @@ public class Problema3 {
             cadena += "Fizz";
         } else if (i % 5 == 0) {
             cadena += "Buzz";
-        }else if (i %7 ==0){
-            cadena+= "Foo";
-        }else if (i %11 ==0){
-            cadena+= "Boo";
-        }
-        else {
+        } else if (i % 7 == 0) {
+            cadena += "Foo";
+        } else if (i % 11 == 0) {
+            cadena += "Boo";
+        } else {
             cadena += i;
         }
         return cadena;
     }
 
-    public static String cadena_8_15() {
-        String cadena = "1";
-        for (int i = 2; i <= 20; i++) {
-            cadena += i;
+
+    public static String cadena_6_20_con_Fizz_Buzz_Foo_Boo(String numero, String segundoNumero) {
+        String cadena = "";
+        char numeroInt = (char) Integer.parseInt(numero);
+        char numeroInt2 = (char) Integer.parseInt(segundoNumero);
+        for (int i = numeroInt - 1 + 1; i <= numeroInt2; i++) {
+            cadena = multiplos(cadena, i);
         }
         return cadena;
     }

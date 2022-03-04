@@ -30,10 +30,10 @@ public class Problema2 {
     }
 
     public static String cadena_8_15(String numero, String segundoNumero) {
-        String cadena = numero;
-        char numeroInt= (char) Integer.parseInt(numero);
-        char numeroInt2= (char) Integer.parseInt(segundoNumero);
-        for (int i = numeroInt+1; i <= numeroInt2; i++) {
+        String cadena = "";
+        char numeroInt = (char) Integer.parseInt(numero);
+        char numeroInt2 = (char) Integer.parseInt(segundoNumero);
+        for (int i = numeroInt; i <= numeroInt2; i++) {
             cadena += i;
         }
         return cadena;
